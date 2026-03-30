@@ -1,0 +1,205 @@
+/* stylelint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Meridian Growth Advisory Design System - Professional B2B Theme */
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    
+    /* Core Colors - Professional B2B Palette with Dark Blue Background */
+    --background: 220 30% 10%;
+    --foreground: 0 0% 98%;
+    
+    /* Gold Primary - Premium accent */
+    --primary: 43 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 43 75% 62%;
+    
+    /* Navy Secondary - Trust and professionalism */
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Neutral Tones */
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 10% 70%;
+    
+    /* Accent - Subtle gold tint */
+    --accent: 220 25% 18%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* UI Elements */
+    --card: 220 30% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 0 0% 98%;
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 43 65% 52%;
+    
+    /* Status Colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* Admin Sidebar */
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 65% 52%;
+    --sidebar-primary-foreground: 220 30% 10%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 43 65% 52%;
+    
+    /* Chart Colors */
+    --chart-1: 43 65% 52%;
+    --chart-2: 220 30% 10%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 142 71% 45%;
+    --chart-5: 38 92% 50%;
+    
+    /* Custom Variables */
+    --navy-dark: 220 30% 10%;
+    --gold: 43 65% 52%;
+    --gold-light: 43 75% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+
+  [dir="ltr"] {
+    direction: ltr;
+  }
+
+  /* English Font */
+  [lang="en"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Arabic Font Support */
+  [lang="ar"] {
+    font-family: 'Noto Naskh Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+  }
+
+  /* Kurdish Sorani Font Support - uses same Arabic script font */
+  [lang="kr"] {
+    font-family: 'Noto Naskh Arabic', 'Segoe UI', 'Geeza Pro', 'Arial Unicode MS', sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+}
+
+@layer utilities {
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Navy Background with Grid */
+  .navy-grid-bg {
+    background-color: hsl(var(--navy-dark));
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Scroll Animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Border Reveal Animation */
+  .border-reveal {
+    position: relative;
+  }
+
+  .border-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(var(--gold));
+    transition: width 0.3s ease;
+  }
+
+  .border-reveal:hover::before {
+    width: 100%;
+  }
+
+  /* Ticker Animation */
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes ticker-scroll-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  .ticker-scroll {
+    animation: ticker-scroll 30s linear infinite;
+  }
+
+  [dir="rtl"] .ticker-scroll {
+    animation: ticker-scroll-rtl 30s linear infinite;
+  }
+}
