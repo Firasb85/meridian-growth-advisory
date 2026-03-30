@@ -157,37 +157,17 @@ export function HomePage() {
       </section>
       {/* Ticker Banner */}
       <TickerBanner />
-      {/* Outcomes Section */}
+      {/* Value Pillars Section */}
       <section id="outcomes" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 fade-up">
+          <div className="text-center mb-16 fade-up">
             <Badge variant="outline" className="mb-4 border-primary/30 text-primary">{outcomesLabel}</Badge>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">
               {outcomesHeading}
             </h2>
           </div>
 
-          {/* Featured Image Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 fade-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
-              <img 
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_02e96498-a119-4622-9606-55bbe50e563e.jpg"
-                alt="Business growth and data analytics"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
-              <img 
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_d1f86174-dbdb-4d2f-adcf-4b248f183ac3.jpg"
-                alt="International business expansion"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[1, 2, 3, 4].map((num) => {
               const outcomesData = t.outcomes as any;
               if (!outcomesData || !outcomesData.cards) return null;
@@ -198,30 +178,57 @@ export function HomePage() {
               return (
                 <Card 
                   key={num} 
-                  className="hover-lift border-reveal fade-up backdrop-blur-sm"
+                  className="hover-lift fade-up group overflow-hidden"
                   style={{
                     backgroundColor: 'rgb(14, 54, 95)',
-                    backgroundImage: 'none',
                     borderColor: 'rgb(51, 60, 77)',
-                    borderWidth: '0.571429px',
+                    borderWidth: '1px',
                     borderStyle: 'solid',
-                    borderRadius: '12px'
+                    borderRadius: '16px'
                   }}
                 >
-                  <CardContent className="p-8 bg-[#1e3b3be0] bg-none" style={{ backgroundColor: 'rgb(14, 54, 95)', backgroundImage: 'none' }}>
-                    <div className="text-5xl font-bold text-primary/20 mb-4">
-                      0{num}
+                  <CardContent className="p-8" style={{ backgroundColor: 'rgb(14, 54, 95)' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-4xl font-bold text-primary/20">
+                        0{num}
+                      </div>
+                      <div className="h-px flex-1 bg-primary/10" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">
+                    <h3 className="text-2xl font-bold mb-3 text-primary-foreground">
                       {card.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-primary-foreground/70 mb-6 text-lg">
                       {card.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {(card.tags as string[] || []).map((tag: string) => (
-                        <Badge key={tag} variant="secondary">{tag}</Badge>
-                      ))}
+                    
+                    {/* Detail sub-items */}
+                    <div className="space-y-5">
+                      {card.detail1Title ? (
+                        <>
+                          <div className="border-l-2 border-primary/40 pl-4">
+                            <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-1.5">
+                              {card.detail1Title}
+                            </h4>
+                            <p className="text-sm text-primary-foreground/60 leading-relaxed">
+                              {card.detail1}
+                            </p>
+                          </div>
+                          <div className="border-l-2 border-primary/40 pl-4">
+                            <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-1.5">
+                              {card.detail2Title}
+                            </h4>
+                            <p className="text-sm text-primary-foreground/60 leading-relaxed">
+                              {card.detail2}
+                            </p>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="flex flex-wrap gap-2">
+                          {(card.tags as string[] || []).map((tag: string) => (
+                            <Badge key={tag} variant="secondary">{tag}</Badge>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

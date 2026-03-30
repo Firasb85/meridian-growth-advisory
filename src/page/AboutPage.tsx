@@ -61,7 +61,7 @@ export function AboutPage() {
               <p className="text-lg text-foreground/80 leading-relaxed">
                 {getTranslation(t, 'about.body2')}
               </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-xl font-bold text-primary leading-relaxed">
                 {getTranslation(t, 'about.body3')}
               </p>
             </div>
