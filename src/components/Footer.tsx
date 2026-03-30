@@ -30,15 +30,15 @@ export function Footer() {
             <p className="text-sm text-secondary-foreground/80">{footerDesc}</p>
           </div>
 
-          {/* Column 2: Services */}
+          {/* Column 2: Expertise */}
           <div>
             <h4 className="text-sm font-semibold mb-3 uppercase tracking-wider">
-              {getTranslation(t, 'footer.services')}
+              {getTranslation(t, 'nav.expertise')}
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/services" className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                  {getTranslation(t, 'nav.services')}
+                  {getTranslation(t, 'nav.expertise')}
                 </Link>
               </li>
               <li>

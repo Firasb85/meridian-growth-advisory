@@ -68,24 +68,17 @@ export function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           <button
             type="button"
-            onClick={() => scrollToSection('outcomes')}
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            {getTranslation(t, 'nav.outcomes')}
-          </button>
-          <button
-            type="button"
-            onClick={() => handleNavClick('/services')}
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            {getTranslation(t, 'nav.services')}
-          </button>
-          <button
-            type="button"
-            onClick={() => handleNavClick('/industries')}
+            onClick={() => scrollToSection('industries')}
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             {getTranslation(t, 'nav.industries')}
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection('domains')}
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            {getTranslation(t, 'nav.expertise')}
           </button>
           <button
             type="button"
@@ -137,24 +130,17 @@ export function Navigation() {
               <div className="flex flex-col gap-6 mt-8">
                 <button
                   type="button"
-                  onClick={() => scrollToSection('outcomes')}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-start"
-                >
-                  {getTranslation(t, 'nav.outcomes')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('/services')}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-start"
-                >
-                  {getTranslation(t, 'nav.services')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('/industries')}
+                  onClick={() => scrollToSection('industries')}
                   className="text-lg font-medium text-foreground hover:text-primary transition-colors text-start"
                 >
                   {getTranslation(t, 'nav.industries')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('domains')}
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-start"
+                >
+                  {getTranslation(t, 'nav.expertise')}
                 </button>
                 <button
                   type="button"
