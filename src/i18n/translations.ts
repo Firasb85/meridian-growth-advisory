@@ -6,20 +6,20 @@ export const translations: Translations = {
   ar: {
     // Navigation
     nav: {
-      outcomes: 'النتائج',
+      outcomes: 'ركائز القيمة',
       services: 'الخدمات',
       industries: 'الصناعات',
       about: 'من نحن',
-      cta: 'تواصل معنا',
+      cta: 'احجز جلسة استكشافية',
     },
     // Hero Section
     hero: {
-      eyebrow: 'استشارات التوسع في الأسواق',
-      heading: 'نحول الطموح إلى ',
-      headingEm: 'نمو قابل للقياس',
-      subheading: 'نساعد الشركات على دخول أسواق جديدة وبناء شبكات توزيع قوية وتحقيق نمو مستدام في الشرق الأوسط وما بعده',
-      primaryCta: 'ابدأ المحادثة',
-      secondaryCta: 'اكتشف نتائجنا',
+      eyebrow: 'استشارات النمو الاستراتيجي',
+      heading: 'حوّل تعقيدات السوق إلى ',
+      headingEm: 'نمو مربح.',
+      subheading: 'نساعد القيادات التنفيذية على تقليل مخاطر التوسع وحماية هوامش الربح وبناء أسس أعمال عالية الأداء. من التعامل مع اللوائح المحلية المعقدة في الأسواق الجديدة إلى تحسين تنفيذك الداخلي، نوفر لك الوضوح الاستراتيجي الذي تحتاجه للتوسع بثقة مطلقة.',
+      primaryCta: 'احجز جلسة استكشافية استراتيجية',
+      secondaryCta: 'اكتشف ركائز القيمة',
       stats: {
         years: 'سنوات من الخبرة',
         projects: 'مشروع ناجح',
@@ -33,30 +33,46 @@ export const translations: Translations = {
         item4: 'معدل نجاح 92% في التوسع',
       },
     },
-    // Outcomes Section
+    // Value Pillars Section (formerly Outcomes)
     outcomes: {
-      label: 'النتائج',
-      heading: 'نتائج قابلة للقياس تدفع النمو',
+      label: 'ركائز القيمة',
+      heading: 'كيف ندفع نموك',
       cards: {
         1: {
-          title: 'دخول السوق',
-          description: 'استراتيجيات دخول شاملة مصممة خصيصًا لأهدافك وقطاعك',
-          tags: ['تحليل السوق', 'تقييم المخاطر', 'خطة الدخول'],
+          title: 'التوسع في السوق وتقليل المخاطر',
+          description: 'توسّع في أسواق جديدة دون تخمين أو مقامرة.',
+          tags: ['تنقّل بيقين', 'توطين سلس'],
+          detail1Title: 'تنقّل بيقين',
+          detail1: 'نجري تقييمات معمقة للسوق ونخفف المخاطر التنظيمية لتتخذ قرارات التوسع بناءً على حقائق صلبة تحمي رأس مالك.',
+          detail2Title: 'توطين سلس',
+          detail2: 'من فحص الشركاء المحليين الموثوقين إلى ضمان التكيف الثقافي واللغوي، نبني استراتيجيات دخول مصممة لتحقيق جذب فوري ومتوافق.',
         },
         2: {
-          title: 'شبكات التوزيع',
-          description: 'بناء وتحسين قنوات التوزيع لتحقيق أقصى تغطية للسوق',
-          tags: ['اختيار الشركاء', 'إدارة القنوات', 'التحسين'],
+          title: 'تسريع الإيرادات والربحية',
+          description: 'حوّل إمكانات السوق إلى نتائج مالية قابلة للقياس ومستدامة.',
+          tags: ['حماية هوامشك', 'تعظيم أثر المبيعات'],
+          detail1Title: 'حماية هوامشك',
+          detail1: 'ننفذ استراتيجيات تسعير أذكى ونقضي على خسائر التجارة لضمان وصول نمو إيراداتك فعلياً إلى صافي أرباحك.',
+          detail2Title: 'تعظيم أثر المبيعات',
+          detail2: 'بصقل استهدافك للسوق وتحسين فعالية القنوات، نحوّل الفرص الضائعة إلى تدفق نقدي ملموس ونمو في قاعدة العملاء.',
         },
         3: {
-          title: 'النمو المستدام',
-          description: 'استراتيجيات نمو طويلة الأجل تتكيف مع ديناميكيات السوق',
-          tags: ['التوسع', 'التحسين', 'القياس'],
+          title: 'الكفاءة التشغيلية والتنفيذ',
+          description: 'سد الفجوة بين الاستراتيجية العالية المستوى والتنفيذ المتقن على أرض الواقع.',
+          tags: ['مبني للتنفيذ', 'إزالة الهدر'],
+          detail1Title: 'مبني للتنفيذ',
+          detail1: 'نساعدك في تصميم وإدارة شبكات توزيع قوية تحسّن وصولك إلى السوق وأداءك الميداني بشكل كبير.',
+          detail2Title: 'إزالة الهدر',
+          detail2: 'نبسّط العمليات الداخلية المعقدة ونقلل الاحتكاك التشغيلي غير الضروري، ليعمل عملك بشكل أكثر رشاقة وسرعة وكفاءة.',
         },
         4: {
-          title: 'الامتثال المحلي',
-          description: 'التنقل في اللوائح المحلية والمتطلبات الثقافية بسلاسة',
-          tags: ['الامتثال', 'التوطين', 'الشراكات'],
+          title: 'الوضوح الاستراتيجي للقيادة',
+          description: 'اخترق الضجيج واتخذ قرارات الأعمال الحاسمة بثقة تامة.',
+          tags: ['رؤى قابلة للتنفيذ', 'الجاهزية الهيكلية'],
+          detail1Title: 'رؤى قابلة للتنفيذ',
+          detail1: 'نبسّط البيانات المجزأة وتحليل المنافسين المعقد إلى خطوات واضحة ومرتبة الأولوية تقلل من تردد الإدارة.',
+          detail2Title: 'الجاهزية الهيكلية',
+          detail2: 'نعزز أساسك التنظيمي وانضباطك التشغيلي، لضمان أن عملك متين هيكلياً وجاهز لدعم النمو طويل الأجل.',
         },
       },
     },
@@ -140,28 +156,28 @@ export const translations: Translations = {
     // About Page
     about: {
       label: 'من نحن',
-      heading: 'نحن شريكك في ',
-      headingEm: 'النمو العالمي',
+      heading: 'الاستراتيجية لا شيء بدون ',
+      headingEm: 'التنفيذ.',
       heading2: '',
-      body1: 'ميريديان هي شركة استشارية متخصصة في التوسع في الأسواق تساعد الشركات على التنقل في تعقيدات دخول أسواق جديدة. مع أكثر من 12 عامًا من الخبرة في منطقة الشرق الأوسط وشمال أفريقيا وما بعدها، نقدم استراتيجيات مثبتة تحول الطموح إلى نتائج قابلة للقياس.',
-      body2: 'يجمع فريقنا بين المعرفة المحلية العميقة والخبرة الدولية لتقديم حلول مصممة خصيصًا تتناسب مع أهداف عملك الفريدة. نحن لا نقدم المشورة فقط - بل نصبح شريكك في النمو، ونعمل جنبًا إلى جنب معك لضمان النجاح المستدام.',
-      body3: 'من أبحاث السوق الأولية إلى التحسين المستمر، نحن ملتزمون بتقديم قيمة استثنائية في كل مرحلة من رحلة التوسع الخاصة بك.',
+      body1: 'معظم شركات الاستشارات تقدم تقريراً نظرياً وتنصرف، تاركة إياك لتكتشف التنفيذ بنفسك. نحن نعمل بطريقة مختلفة. نؤمن أن النمو الحقيقي للأعمال يتطلب سد الفجوة بين الاستراتيجية الطموحة والتنفيذ المتقن على أرض الواقع.',
+      body2: 'نتشارك مع القيادات التنفيذية لبناء أسس أعمال مستدامة. سواء كنت تواجه تعقيدات دخول سوق جديد أو تعيد هيكلة عملياتك الداخلية لتحقيق أقصى كفاءة، نجلب نهجاً عملياً للانضباط التشغيلي. لا نخبرك فقط أين توجد الفرص؛ بل نساعدك في بناء الهيكل وتأمين الشركاء المحليين المناسبين وتنفيذ الأنظمة المطلوبة لاقتناصها.',
+      body3: 'انمُ أسرع. توسّع بأمان أكبر. ابنِ بقوة أعلى.',
       values: {
         1: {
-          name: 'التميز',
-          description: 'نحن نسعى للتميز في كل مشروع نقوم به',
+          name: 'تنفيذ عملي',
+          description: 'لا نكتفي بتقديم التقارير — نعمل جنباً إلى جنب مع فريقك لتنفيذ كل استراتيجية نوصي بها.',
         },
         2: {
-          name: 'الشراكة',
-          description: 'نجاحك هو نجاحنا - نحن نعمل كامتداد لفريقك',
+          name: 'انضباط تشغيلي',
+          description: 'نبني أنظمة وهياكل تضمن أن عملك يعمل بشكل أكثر رشاقة وسرعة وكفاءة.',
         },
         3: {
-          name: 'النتائج',
-          description: 'نحن نركز على تحقيق نتائج قابلة للقياس وملموسة',
+          name: 'نتائج قابلة للقياس',
+          description: 'كل مشروع مرتبط بمؤشرات أداء واضحة — نركز على نتائج تصل إلى صافي أرباحك.',
         },
         4: {
-          name: 'النزاهة',
-          description: 'نحن نعمل بأعلى معايير الأخلاق والشفافية',
+          name: 'شراكة استراتيجية',
+          description: 'نموك هو مهمتنا. ننخرط في تحدياتك ونتشارك المسؤولية عن النجاح.',
         },
       },
     },
@@ -199,9 +215,9 @@ export const translations: Translations = {
     },
     // CTA Band
     cta: {
-      title: 'هل أنت مستعد لتوسيع أعمالك؟',
-      subtitle: 'دعنا نناقش كيف يمكننا مساعدتك في تحقيق أهداف النمو الخاصة بك',
-      button: 'تحدث إلى مستشار',
+      title: 'هل أنت مستعد لتسريع نموك؟',
+      subtitle: 'عدم اليقين هو عدو التوسع. توقف عن التردد وابدأ بالتنفيذ. تشارك معنا لبناء مسار أوضح نحو الربحية وتحسين عملياتك ودخول سوقك القادم بثقة مطلقة.',
+      button: 'لنبنِ خارطة طريق نموك',
     },
     // Footer
     footer: {
@@ -213,14 +229,14 @@ export const translations: Translations = {
     },
     // Ticker Keywords
     ticker: [
-      'دخول السوق',
+      'التوسع في الأسواق',
+      'تقليل المخاطر',
+      'تسريع الإيرادات',
+      'الكفاءة التشغيلية',
+      'الوضوح الاستراتيجي',
       'شبكات التوزيع',
-      'النمو المستدام',
-      'الامتثال المحلي',
-      'اختيار الشركاء',
-      'أبحاث السوق',
-      'التوسع الاستراتيجي',
-      'التوطين',
+      'حماية الهوامش',
+      'التميز في التنفيذ',
     ],
     // Admin
     admin: {
@@ -372,20 +388,20 @@ export const translations: Translations = {
   en: {
     // Navigation
     nav: {
-      outcomes: 'Outcomes',
+      outcomes: 'Value Pillars',
       services: 'Services',
       industries: 'Industries',
       about: 'About',
-      cta: 'Talk to Us',
+      cta: 'Book a Discovery Session',
     },
     // Hero Section
     hero: {
-      eyebrow: 'Market Expansion Advisory',
-      heading: 'Transforming Ambition into ',
-      headingEm: 'Measurable Growth',
-      subheading: 'We help businesses enter new markets, build powerful distribution networks, and achieve sustainable growth across the Middle East and beyond',
-      primaryCta: 'Start the Conversation',
-      secondaryCta: 'Explore Our Outcomes',
+      eyebrow: 'Strategic Growth Advisory',
+      heading: 'Turn Market Complexity Into ',
+      headingEm: 'Profitable Growth.',
+      subheading: 'We help senior leaders de-risk expansion, protect margins, and build high-performance business foundations. From navigating complex local regulations in new territories to optimizing your internal execution, we provide the strategic clarity you need to scale with absolute confidence.',
+      primaryCta: 'Book a Strategic Discovery Session',
+      secondaryCta: 'Explore Our Value Pillars',
       stats: {
         years: 'Years of Experience',
         projects: 'Successful Projects',
@@ -399,30 +415,46 @@ export const translations: Translations = {
         item4: '92% expansion success rate',
       },
     },
-    // Outcomes Section
+    // Value Pillars Section (formerly Outcomes)
     outcomes: {
-      label: 'Outcomes',
-      heading: 'Measurable Results That Drive Growth',
+      label: 'Value Pillars',
+      heading: 'How We Drive Your Growth',
       cards: {
         1: {
-          title: 'Market Entry',
-          description: 'Comprehensive entry strategies tailored to your goals and sector',
-          tags: ['Market Analysis', 'Risk Assessment', 'Entry Plan'],
+          title: 'Market Expansion & De-Risking',
+          description: 'Scale into new territories without the guesswork or the gamble.',
+          tags: ['Navigate with Certainty', 'Seamless Localization'],
+          detail1Title: 'Navigate with Certainty',
+          detail1: 'We conduct in-depth market assessments and mitigate regulatory risks so you make expansion decisions based on hard facts, protecting your capital.',
+          detail2Title: 'Seamless Localization',
+          detail2: 'From vetting reliable local partners to ensuring cultural and linguistic adaptation, we build entry strategies designed for immediate, compliant traction.',
         },
         2: {
-          title: 'Distribution Networks',
-          description: 'Build and optimize distribution channels for maximum market coverage',
-          tags: ['Partner Selection', 'Channel Management', 'Optimization'],
+          title: 'Revenue & Profitability Acceleration',
+          description: 'Turn your market potential into measurable, sustainable financial results.',
+          tags: ['Protect Your Margins', 'Maximize Sales Impact'],
+          detail1Title: 'Protect Your Margins',
+          detail1: 'We implement smarter pricing strategies and eliminate trade losses to ensure your top-line growth actually hits your bottom line.',
+          detail2Title: 'Maximize Sales Impact',
+          detail2: 'By sharpening your market targeting and improving channel effectiveness, we transform missed opportunities into tangible cash flow and customer growth.',
         },
         3: {
-          title: 'Sustainable Growth',
-          description: 'Long-term growth strategies that adapt to market dynamics',
-          tags: ['Expansion', 'Optimization', 'Scaling'],
+          title: 'Operational Efficiency & Execution',
+          description: 'Bridge the gap between high-level strategy and flawless on-the-ground reality.',
+          tags: ['Built for Execution', 'Eliminate Waste'],
+          detail1Title: 'Built for Execution',
+          detail1: 'We help you design and manage robust distribution networks that dramatically improve your market access and field performance.',
+          detail2Title: 'Eliminate Waste',
+          detail2: 'We streamline complex internal processes and reduce unnecessary operational friction, so your business runs leaner, faster, and more efficiently.',
         },
         4: {
-          title: 'Local Compliance',
-          description: 'Navigate local regulations and cultural requirements seamlessly',
-          tags: ['Compliance', 'Localization', 'Partnerships'],
+          title: 'Strategic Clarity for Leadership',
+          description: 'Cut through the noise and make critical business decisions with total confidence.',
+          tags: ['Actionable Insights', 'Structural Readiness'],
+          detail1Title: 'Actionable Insights',
+          detail1: 'We simplify fragmented data and complex competitor analysis into clear, prioritized steps that reduce executive hesitation.',
+          detail2Title: 'Structural Readiness',
+          detail2: 'We strengthen your organizational foundation and operational discipline, ensuring your business is structurally sound and ready to sustain long-term growth.',
         },
       },
     },
@@ -506,28 +538,28 @@ export const translations: Translations = {
     // About Page
     about: {
       label: 'About',
-      heading: 'We Are Your Partner in ',
-      headingEm: 'Global Growth',
+      heading: 'Strategy is Nothing Without ',
+      headingEm: 'Execution.',
       heading2: '',
-      body1: 'Meridian is a specialized market expansion advisory firm that helps businesses navigate the complexities of entering new markets. With over 12 years of experience across the MENA region and beyond, we deliver proven strategies that transform ambition into measurable results.',
-      body2: 'Our team combines deep local knowledge with international expertise to deliver tailored solutions that align with your unique business goals. We don\'t just advise—we become your growth partner, working alongside you to ensure sustainable success.',
-      body3: 'From initial market research to ongoing optimization, we\'re committed to delivering exceptional value at every stage of your expansion journey.',
+      body1: 'Most consultancies deliver a theoretical report and walk away, leaving you to figure out the implementation. We do things differently. We believe that true business growth requires bridging the gap between visionary strategy and flawless, on-the-ground execution.',
+      body2: 'We partner with executive leaders to build sustainable business foundations. Whether you are navigating the complexities of a new market entry or restructuring your internal operations for maximum efficiency, we bring a hands-on approach to operational discipline. We don\'t just tell you where the opportunities are; we help you build the structure, secure the right local partners, and execute the systems required to capture them.',
+      body3: 'Grow faster. Expand safer. Build stronger.',
       values: {
         1: {
-          name: 'Excellence',
-          description: 'We strive for excellence in every project we undertake',
+          name: 'Hands-On Execution',
+          description: 'We don\'t just deliver reports — we work alongside your team to implement every strategy we recommend.',
         },
         2: {
-          name: 'Partnership',
-          description: 'Your success is our success—we work as an extension of your team',
+          name: 'Operational Discipline',
+          description: 'We build systems and structures that ensure your business runs leaner, faster, and more efficiently.',
         },
         3: {
-          name: 'Results',
-          description: 'We focus on delivering measurable, tangible outcomes',
+          name: 'Measurable Outcomes',
+          description: 'Every engagement is tied to clear KPIs — we focus on results that hit your bottom line.',
         },
         4: {
-          name: 'Integrity',
-          description: 'We operate with the highest standards of ethics and transparency',
+          name: 'Strategic Partnership',
+          description: 'Your growth is our mission. We embed ourselves in your challenges and share accountability for success.',
         },
       },
     },
@@ -565,9 +597,9 @@ export const translations: Translations = {
     },
     // CTA Band
     cta: {
-      title: 'Ready to Expand Your Business?',
-      subtitle: 'Let\'s discuss how we can help you achieve your growth objectives',
-      button: 'Talk to an Advisor',
+      title: 'Ready to Accelerate Your Growth?',
+      subtitle: 'Uncertainty is the enemy of scaling. Stop hesitating and start executing. Partner with us to build a clearer path to profitability, optimize your operations, and enter your next market with absolute confidence.',
+      button: 'Let\'s Build Your Growth Roadmap',
     },
     // Footer
     footer: {
@@ -579,14 +611,14 @@ export const translations: Translations = {
     },
     // Ticker Keywords
     ticker: [
-      'Market Entry',
+      'Market Expansion',
+      'De-Risk Growth',
+      'Revenue Acceleration',
+      'Operational Efficiency',
+      'Strategic Clarity',
       'Distribution Networks',
-      'Sustainable Growth',
-      'Local Compliance',
-      'Partner Selection',
-      'Market Research',
-      'Strategic Expansion',
-      'Localization',
+      'Margin Protection',
+      'Execution Excellence',
     ],
     // Admin
     admin: {
@@ -738,20 +770,20 @@ export const translations: Translations = {
   kr: {
     // Navigation - ڕێنیشاندەر
     nav: {
-      outcomes: 'ئەنجامەکان',
+      outcomes: 'ستوونەکانی بەها',
       services: 'خزمەتگوزارییەکان',
       industries: 'پیشەسازییەکان',
       about: 'دەربارەی ئێمە',
-      cta: 'پەیوەندیمان پێوە بکە',
+      cta: 'جلسەیەکی دۆزینەوە بسپێرە',
     },
     // Hero Section - بەشی سەرەکی
     hero: {
-      eyebrow: 'ڕاوێژکاری فراوانکردنی بازاڕ',
-      heading: 'ئامانجەکان دەگۆڕین بۆ ',
-      headingEm: 'گەشەی پێوانەکراو',
-      subheading: 'یارمەتی کۆمپانیاکان دەدەین بۆ چوونە ناو بازاڕی نوێ و دروستکردنی تۆڕی بەهێزی دابەشکردن و بەدەستهێنانی گەشەی بەردەوام لە ڕۆژهەڵاتی ناوەڕاست و دەرەوە',
-      primaryCta: 'دەستپێکردنی گفتوگۆ',
-      secondaryCta: 'ئەنجامەکانمان بدۆزەرەوە',
+      eyebrow: 'ڕاوێژکاری گەشەی ستراتیژی',
+      heading: 'ئاڵۆزی بازاڕ بگۆڕە بۆ ',
+      headingEm: 'گەشەی قازانجبەخش.',
+      subheading: 'یارمەتی سەرکردەکانی بەڕێوەبردن دەدەین بۆ کەمکردنەوەی مەترسی فراوانکردن و پاراستنی هەڵەی قازانج و دروستکردنی بنەمای کاروباری بەهێز. لە ڕێنیشاندانی یاسا ناوخۆییە ئاڵۆزەکان لە بازاڕی نوێ بگرە تا باشترکردنی جێبەجێکردنی ناوخۆ، ئێمە ڕوونی ستراتیژیەکەت پێدەدەین کە پێویستتە بۆ گەشەکردن بە متمانەی تەواو.',
+      primaryCta: 'جلسەیەکی ستراتیژی بسپێرە',
+      secondaryCta: 'ستوونەکانی بەهامان بدۆزەرەوە',
       stats: {
         years: 'ساڵ شارەزایی',
         projects: 'پڕۆژەی سەرکەوتوو',
@@ -767,28 +799,44 @@ export const translations: Translations = {
     },
     // Outcomes Section - بەشی ئەنجامەکان
     outcomes: {
-      label: 'ئەنجامەکان',
-      heading: 'ئەنجامی پێوانەکراو کە گەشە پێشدەخات',
+      label: 'ستوونەکانی بەها',
+      heading: 'چۆن گەشەکەت پێش دەخەین',
       cards: {
         1: {
-          title: 'چوونەژوورەوەی بازاڕ',
-          description: 'ستراتیژی تەواوی چوونەژوورەوە کە بۆ ئامانج و بوارەکەت دروستکراوە',
-          tags: ['شیکاری بازاڕ', 'هەڵسەنگاندنی مەترسی', 'پلانی چوونەژوورەوە'],
+          title: 'فراوانکردنی بازاڕ و کەمکردنەوەی مەترسی',
+          description: 'بەبێ خەیاڵاندن یان مەترسی لە بازاڕی نوێ فراوان ببە.',
+          tags: ['بە دڵنیایی بڕۆ', 'ناوخۆییکردنی سلیس'],
+          detail1Title: 'بە دڵنیایی بڕۆ',
+          detail1: 'هەڵسەنگاندنی قووڵی بازاڕ دەکەین و مەترسی یاسایی کەم دەکەینەوە بۆ ئەوەی بڕیاری فراوانکردن لەسەر بنەمای ڕاستی بدەیت و سەرمایەکەت بپارێزیت.',
+          detail2Title: 'ناوخۆییکردنی سلیس',
+          detail2: 'لە هەڵسەنگاندنی هاوبەشی ناوخۆیی متمانەپێکراو بگرە تا دڵنیابوون لە گونجاندنی کەلتووری و زمانی، ستراتیژی چوونەژوورەوە دروست دەکەین بۆ گرتنی بازاڕ بە خێرایی و گونجاندن.',
         },
         2: {
-          title: 'تۆڕەکانی دابەشکردن',
-          description: 'دروستکردن و باشترکردنی کەناڵەکانی دابەشکردن بۆ زۆرترین داپۆشینی بازاڕ',
-          tags: ['هەڵبژاردنی هاوبەش', 'بەڕێوەبردنی کەناڵ', 'باشترکردن'],
+          title: 'خێراکردنی داهات و قازانج',
+          description: 'توانای بازاڕەکەت بگۆڕە بۆ ئەنجامی دارایی پێوانەکراو و بەردەوام.',
+          tags: ['هەڵەی قازانجت بپارێزە', 'کاریگەری فرۆشتن بەرز بکەرەوە'],
+          detail1Title: 'هەڵەی قازانجت بپارێزە',
+          detail1: 'ستراتیژی نرخدانانی زیرەکتر جێبەجێ دەکەین و زیانی بازرگانی لەناو دەبەین بۆ ئەوەی گەشەی داهاتەکەت بە ڕاستی بگاتە قازانجی ڕەسەنەکەت.',
+          detail2Title: 'کاریگەری فرۆشتن بەرز بکەرەوە',
+          detail2: 'بە تیژکردنەوەی ئامانجگرتنی بازاڕ و باشترکردنی کاریگەری کەناڵەکان، دەرفەتە لەدەستچووەکان دەگۆڕین بۆ گەڕانەوەی دارایی و گەشەی کڕیار.',
         },
         3: {
-          title: 'گەشەی بەردەوام',
-          description: 'ستراتیژی درێژخایەن بۆ گەشەی بەردەوام و سوودمەندی',
-          tags: ['پلانی گەشە', 'شیکاری بازاڕ', 'بەدواداچوون'],
+          title: 'کارایی کارگێڕی و جێبەجێکردن',
+          description: 'بۆشایی نێوان ستراتیژی بەرز و جێبەجێکردنی تەواو لەسەر زەوی پڕ بکەرەوە.',
+          tags: ['دروستکراو بۆ جێبەجێکردن', 'هەدەر لابردن'],
+          detail1Title: 'دروستکراو بۆ جێبەجێکردن',
+          detail1: 'یارمەتیت دەدەین لە دیزاینکردن و بەڕێوەبردنی تۆڕی بەهێزی دابەشکردن کە دەستگەیشتنت بە بازاڕ و ئەدای مەیدانیت بە ئاشکرا باشتر دەکات.',
+          detail2Title: 'هەدەر لابردن',
+          detail2: 'پرۆسەی ناوخۆیی ئاڵۆز سادە دەکەین و لێخوڕینی کارگێڕی بێ پێویست کەم دەکەینەوە، بۆ ئەوەی کاروبارەکەت بەخێراتر و بەکاراتر بڕوات.',
         },
         4: {
-          title: 'گونجاندنی ناوخۆیی',
-          description: 'دڵنیابوون لە گونجان لەگەڵ یاسا و کەلتووری ناوخۆیی',
-          tags: ['یاسایی', 'کەلتووری', 'کاروبار'],
+          title: 'ڕوونی ستراتیژی بۆ سەرکردایەتی',
+          description: 'لە ناو هەنگاوەکان تێپەڕە و بڕیاری کاروباری گرنگ بە متمانەی تەواو بدە.',
+          tags: ['بینینی کردەیی', 'ئامادەیی ڕێکخراوەیی'],
+          detail1Title: 'بینینی کردەیی',
+          detail1: 'داتای پارچەپارچە و شیکاری ئاڵۆزی ڕکابەر سادە دەکەین بۆ هەنگاوی ڕوون و ڕیزبەندکراو کە دوودڵی بەڕێوەبەران کەم دەکاتەوە.',
+          detail2Title: 'ئامادەیی ڕێکخراوەیی',
+          detail2: 'بنەمای ڕێکخراوەیی و پابەندی کارگێڕیت بەهێز دەکەین، بۆ دڵنیابوون لەوەی کاروبارەکەت لە ڕووی ڕێکخراوەیییەوە بەهێزە و ئامادەیە بۆ پشتگیری گەشەی درێژخایەن.',
         },
       },
     },
@@ -872,28 +920,28 @@ export const translations: Translations = {
     // About Page - پەڕەی دەربارەی ئێمە
     about: {
       label: 'دەربارەی ئێمە',
-      heading: 'هاوبەشی ',
-      headingEm: 'باوەڕپێکراوت',
-      heading2: ' بۆ گەشەی جیهانی',
-      body1: 'لە Meridian، ئێمە تەنها ڕاوێژکار نین - ئێمە هاوبەشی گەشەی ئێوەین. لەگەڵ زیاتر لە دوو دەیە شارەزایی لە فراوانکردنی بازاڕی ڕۆژهەڵاتی ناوەڕاست، ئێمە سەدان کۆمپانیامان یارمەتیداوە بۆ چوونەژوورەوەی سەرکەوتوو بۆ بازاڕی نوێ و دروستکردنی تۆڕی بەهێزی دابەشکردن.',
-      body2: 'ڕێبازمان سادەیە: ئێمە گوێ دەگرین، شیکاری دەکەین و جێبەجێ دەکەین. تیمی پسپۆڕمان تێگەیشتنی قووڵیان هەیە لە بازاڕی ناوخۆیی، کەلتوور و ڕێگای کاروبار، دڵنیابوون لەوەی کە ستراتیژیەکانمان نەک تەنها کاریگەرن بەڵکو بەردەوامیش هەیە.',
-      body3: 'چ ئامانجت چوونەژوورەوە بێت بۆ بازاڕی یەکەمت یان فراوانکردنی ئامادەبوونی ئێستات، ئێمە لێرەین بۆ دڵنیابوون لە سەرکەوتنت لە هەر هەنگاوێکدا.',
+      heading: 'ستراتیژی هیچ نییە بەبێ ',
+      headingEm: 'جێبەجێکردن.',
+      heading2: '',
+      body1: 'زۆرینەی کۆمپانیاکانی ڕاوێژکاری ڕاپۆرتێکی تیۆری دەدەن و دەڕۆن، تۆ بە تەنها بۆ جێبەجێکردن دەهێڵنەوە. ئێمە جیاوازین. باوەڕمان وایە گەشەی ڕاستەقینەی کاروبار پێویستی بە پڕکردنەوەی بۆشایی نێوان ستراتیژی بینایی و جێبەجێکردنی تەواو لەسەر زەوییە.',
+      body2: 'هاوبەشی سەرکردەکانی بەڕێوەبردنین بۆ دروستکردنی بنەمای بەردەوامی کاروبار. چ ئاڵۆزی چوونەژوورەوەی بازاڕی نوێ بێت یان ڕێکخستنەوەی کارەکانی ناوخۆ بۆ زۆرترین کارایی، ئێمە ڕێبازێکی کردەیی دەهێنین بۆ پابەندبوون بە کارگێڕی. تەنها پێت ناڵێین دەرفەتەکان لەکوێن؛ یارمەتیت دەدەین لە دروستکردنی ڕێکخراوە و دۆزینەوەی هاوبەشی ناوخۆیی گونجاو و جێبەجێکردنی سیستەمەکان بۆ گرتنیان.',
+      body3: 'خێراتر گەشە بکە. بە ئاسوودەیی فراوان ببە. بەهێزتر بنیاد بنێ.',
       values: {
         1: {
-          name: 'تایبەتمەندی',
-          description: 'هەر کۆمپانیایەک بێهاوتایە. ئێمە چارەسەر دەگونجێنین بۆ پێداویستی تایبەتی تۆ.',
+          name: 'جێبەجێکردنی کردەیی',
+          description: 'تەنها ڕاپۆرت ناردن نییە — لەگەڵ تیمەکەت کار دەکەین بۆ جێبەجێکردنی هەر ستراتیژییەک.',
         },
         2: {
-          name: 'شارەزایی',
-          description: 'زانیاری قووڵی بازاڕ و ڕێکۆردی سەلماوە لە سەرکەوتن.',
+          name: 'پابەندی کارگێڕی',
+          description: 'سیستەم و ڕێکخراوەی دادەنێین کە کاروبارەکەت خێراتر و کاراتر بڕوات.',
         },
         3: {
-          name: 'هاوبەشیەتی',
-          description: 'سەرکەوتنت سەرکەوتنی ئێمەیە. ئێمە پابەندین بۆ گەشەی درێژخایەنت.',
+          name: 'ئەنجامی پێوانەکراو',
+          description: 'هەر پڕۆژەیەک بەستراوە بە پێوەرەکانی ئەنجام — سەرنجمان لەسەر ئەنجامی ڕاستەقینەیە.',
         },
         4: {
-          name: 'ئەنجام',
-          description: 'سەرنجمان لەسەر ئەنجامی پێوانەکراوە کە کاریگەری ڕاستەقینەی هەیە.',
+          name: 'هاوبەشی ستراتیژی',
+          description: 'گەشەت مەبەستی ئێمەیە. خۆمان لە ناو ئاستەنگەکانت دەخەینە ناو و بەرپرسیاری سەرکەوتن هاوبەشین.',
         },
       },
     },
@@ -931,9 +979,9 @@ export const translations: Translations = {
     },
     // CTA Band - باندی بانگهێشت
     cta: {
-      title: 'ئامادەیت بۆ فراوانکردنی کاروبارەکەت؟',
-      subtitle: 'با باس لەوە بکەین کە چۆن دەتوانین یارمەتیت بدەین بۆ بەدیهێنانی ئامانجەکانی گەشەت',
-      button: 'قسە لەگەڵ ڕاوێژکار بکە',
+      title: 'ئامادەیت بۆ خێراکردنی گەشەکەت؟',
+      subtitle: 'نادڵنیایی دوژمنی فراوانکردنە. لە دوودڵیکردن وەستە و دەست بە جێبەجێکردن بکە. هاوبەشیمان لەگەڵ بکە بۆ دروستکردنی ڕێگایەکی ڕوونتر بەرەو قازانج و باشترکردنی کارەکانت و چوونەژوورەوەی بازاڕی داهاتووت بە متمانەی تەواو.',
+      button: 'با نەخشەی ڕێگای گەشەکەت دروست بکەین',
     },
     // Footer - پێپەڕ
     footer: {
@@ -945,14 +993,14 @@ export const translations: Translations = {
     },
     // Ticker Keywords - وشە سەرەکییەکان
     ticker: [
-      'چوونەژوورەوەی بازاڕ',
+      'فراوانکردنی بازاڕ',
+      'کەمکردنەوەی مەترسی',
+      'خێراکردنی داهات',
+      'کارایی کارگێڕی',
+      'ڕوونی ستراتیژی',
       'تۆڕەکانی دابەشکردن',
-      'گەشەی بەردەوام',
-      'گونجاندنی ناوخۆیی',
-      'هەڵبژاردنی هاوبەش',
-      'لێکۆڵینەوەی بازاڕ',
-      'فراوانکردنی ستراتیژی',
-      'ناوخۆییکردن',
+      'پاراستنی هەڵەی قازانج',
+      'تەواوی جێبەجێکردن',
     ],
     // Admin - بەڕێوەبەر
     admin: {
