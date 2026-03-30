@@ -1,0 +1,286 @@
+// Meridian Growth Advisory - Home Page
+
+import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import { TickerBanner } from '@/components/TickerBanner';
+import { CTABand } from '@/components/CTABand';
+import { useApp } from '@/contexts/AppContext';
+import { translations, getTranslation } from '@/i18n/translations';
+
+export function HomePage() {
+  const { currentLanguage, contentOverrides } = useApp();
+  const navigate = useNavigate();
+  const t = translations[currentLanguage] || translations.en;
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    // Intersection Observer for scroll animations
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.fade-up');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, []);
+
+  const scrollToOutcomes = () => {
+    const element = document.getElementById('outcomes');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Content overrides with fallbacks
+  const heroHeading = contentOverrides.heroHeading || getTranslation(t, 'hero.heading');
+  const heroSubheading = contentOverrides.heroSubheading || getTranslation(t, 'hero.subheading');
+  const heroPrimaryCta = contentOverrides.heroPrimaryCta || getTranslation(t, 'hero.primaryCta');
+  const heroSecondaryCta = contentOverrides.heroSecondaryCta || getTranslation(t, 'hero.secondaryCta');
+  const outcomesLabel = contentOverrides.outcomesLabel || getTranslation(t, 'outcomes.label');
+  const outcomesHeading = contentOverrides.outcomesHeading || getTranslation(t, 'outcomes.heading');
+  const industriesLabel = contentOverrides.industriesLabel || getTranslation(t, 'industries.label');
+  const industriesHeading = contentOverrides.industriesHeading || getTranslation(t, 'industries.heading');
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="navy-grid-bg min-h-screen flex items-center pt-20 pb-12 relative overflow-hidden">
+        {/* Radial glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Column */}
+            <div className="space-y-6 fade-up">
+              <Badge variant="secondary" className="bg-primary/20 text-primary-foreground border-primary/30">
+                {getTranslation(t, 'hero.eyebrow')}
+              </Badge>
+
+              <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground leading-tight">
+                {heroHeading}
+                <em className="gradient-text not-italic">{getTranslation(t, 'hero.headingEm')}</em>
+              </h1>
+
+              <p className="text-lg text-primary-foreground/80 max-w-xl">
+                {heroSubheading}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button size="lg" onClick={() => navigate('/contact')}>
+                  {heroPrimaryCta}
+                </Button>
+                <Button size="lg" variant="outline" onClick={scrollToOutcomes} className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  {heroSecondaryCta}
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8">
+                <div>
+                  <div className="text-3xl font-bold text-primary">25+</div>
+                  <div className="text-sm text-primary-foreground/70">{getTranslation(t, 'hero.stats.years')}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">32+</div>
+                  <div className="text-sm text-primary-foreground/70">{getTranslation(t, 'hero.stats.projects')}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">4</div>
+                  <div className="text-sm text-primary-foreground/70">{getTranslation(t, 'hero.stats.countries')}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Professional Image */}
+            <div className="hidden md:block fade-up">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_66329d19-68f2-4163-a805-2f92b5acfbc5.jpg"
+                  alt="Professional business advisory meeting"
+                  className="w-full h-[500px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-secondary/20 to-transparent" />
+                <Card className="absolute bottom-6 left-6 right-6 glass border-primary-foreground/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-primary-foreground mb-3">
+                      {getTranslation(t, 'hero.achievements.title')}
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2 text-sm">
+                        <span className="text-primary">✓</span>
+                        <span className="text-primary-foreground/90">
+                          {getTranslation(t, 'hero.achievements.item1')}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm">
+                        <span className="text-primary">✓</span>
+                        <span className="text-primary-foreground/90">
+                          {getTranslation(t, 'hero.achievements.item2')}
+                        </span>
+                      </li>
+                      {getTranslation(t, 'hero.achievements.item3') && (
+                        <li className="flex items-start gap-2 text-sm">
+                          <span className="text-primary">✓</span>
+                          <span className="text-primary-foreground/90">
+                            {getTranslation(t, 'hero.achievements.item3')}
+                          </span>
+                        </li>
+                      )}
+                      {getTranslation(t, 'hero.achievements.item4') && (
+                        <li className="flex items-start gap-2 text-sm">
+                          <span className="text-primary">✓</span>
+                          <span className="text-primary-foreground/90">
+                            {getTranslation(t, 'hero.achievements.item4')}
+                          </span>
+                        </li>
+                      )}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Ticker Banner */}
+      <TickerBanner />
+      {/* Outcomes Section */}
+      <section id="outcomes" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 fade-up">
+            <Badge variant="outline" className="mb-4 border-primary/30 text-primary">{outcomesLabel}</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+              {outcomesHeading}
+            </h2>
+          </div>
+
+          {/* Featured Image Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 fade-up">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
+              <img 
+                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_02e96498-a119-4622-9606-55bbe50e563e.jpg"
+                alt="Business growth and data analytics"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
+              <img 
+                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_d1f86174-dbdb-4d2f-adcf-4b248f183ac3.jpg"
+                alt="International business expansion"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((num) => {
+              const outcomesData = t.outcomes as any;
+              if (!outcomesData || !outcomesData.cards) return null;
+              
+              const card = outcomesData.cards[num];
+              if (!card) return null;
+              
+              return (
+                <Card 
+                  key={num} 
+                  className="hover-lift border-reveal fade-up backdrop-blur-sm"
+                  style={{
+                    backgroundColor: 'rgb(14, 54, 95)',
+                    backgroundImage: 'none',
+                    borderColor: 'rgb(51, 60, 77)',
+                    borderWidth: '0.571429px',
+                    borderStyle: 'solid',
+                    borderRadius: '12px'
+                  }}
+                >
+                  <CardContent className="p-8 bg-[#1e3b3be0] bg-none" style={{ backgroundColor: 'rgb(14, 54, 95)', backgroundImage: 'none' }}>
+                    <div className="text-5xl font-bold text-primary/20 mb-4">
+                      0{num}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      {card.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {(card.tags as string[] || []).map((tag: string) => (
+                        <Badge key={tag} variant="secondary">{tag}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* Industries Section */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 fade-up">
+            <Badge variant="outline" className="mb-4 border-primary/30 text-primary">{industriesLabel}</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+              {industriesHeading}
+            </h2>
+          </div>
+
+          {/* Team Collaboration Image */}
+          <div className="mb-12 fade-up">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px] max-w-5xl mx-auto">
+              <img 
+                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_5efa9751-71b9-4cc2-b904-863d550368bf.jpg"
+                alt="Business team collaboration and strategy planning"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  {industriesHeading}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {['manufacturing', 'agrifood', 'technology', 'construction'].map((industry, index) => (
+              <Card key={industry} className="hover:bg-accent hover:border-primary/30 transition-all duration-300 fade-up bg-card/50 backdrop-blur-sm" style={{ animationDelay: `${index * 100}ms` }}>
+                <CardContent className="p-6 text-center bg-[#1e3b3be0] bg-none">
+                  <div className="text-4xl mb-4">
+                    {industry === 'manufacturing' && '🏭'}
+                    {industry === 'agrifood' && '🌾'}
+                    {industry === 'technology' && '💻'}
+                    {industry === 'construction' && '🏗️'}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    {getTranslation(t, `industries.cards.${industry}.name`)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {getTranslation(t, `industries.cards.${industry}.description`)}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Band */}
+      <CTABand />
+    </div>
+  );
+}
